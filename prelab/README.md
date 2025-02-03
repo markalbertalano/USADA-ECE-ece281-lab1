@@ -4,7 +4,10 @@
 
 ### Truth Table
 
-Insert your truth table here
+| Month | A | B | C | D | Y |
+|-------|---|---|---|---|---|
+|       | 0 | 0 | 0 | 0 | x |
+| Jan   | 0 | 0 | 0 | 1 | 1 |
 
 ### Boolean Equation
 
