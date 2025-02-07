@@ -62,25 +62,29 @@ architecture test_bench of thirtyOneDayMonth_tb is
 	i_B : in std_logic;
 	i_C : in std_logic;
 	i_D : in std_logic;
-	o_Y : out std_logic
-    );	
+	
+    o_Y : out std_logic;
+    d   : in std_logic_vector(7 downto 0)
+    );
   end component;
 
   -- declare any additional components required
   
   signal w_sw : std_logic_vector (3 downto 0):= (others=> '0');
   signal w_Y : std_logic := '0';
+  signal w_d : std_logic_vector(7 downto 0) := (others => '0');
 
   
 begin
-	-- PORT MAPS ----------------------------------------
+	-- PORT MAPS ---------------------------------------- 
 	-- map ports for any component instances (port mapping is like wiring hardware)
     thirtyOneDayMonthMux_inst : thirtyOneDayMonth port map (
 			i_D => w_sw(3),
 			i_C => w_sw(2),
 			i_B => w_sw(1),
 			i_A => w_sw(0),
-	    		o_Y => w_Y
+			o_Y => w_Y,
+			d   => w_d 
         );
 	-----------------------------------------------------
 
@@ -93,8 +97,35 @@ begin
 		w_sw <= x"0"; wait for 10 ns;
             assert w_Y = '0' report "error on x0" severity failure;
         w_sw <= x"1"; wait for 10 ns;
-            assert w_Y = '1' report "error on Jan" severity failure;   
-
+            assert w_Y = '1' report "error on x1" severity failure;
+		w_sw <= x"2"; wait for 10 ns;
+            assert w_Y = '0' report "error on x2" severity failure;
+        w_sw <= x"3"; wait for 10 ns;
+            assert w_Y = '1' report "error on x3" severity failure;
+		w_sw <= x"4"; wait for 10 ns;
+            assert w_Y = '0' report "error on x4" severity failure;
+        w_sw <= x"5"; wait for 10 ns;
+            assert w_Y = '1' report "error on x5" severity failure;
+		w_sw <= x"6"; wait for 10 ns;
+            assert w_Y = '0' report "error on x6" severity failure;
+        w_sw <= x"7"; wait for 10 ns;
+            assert w_Y = '1' report "error on x7" severity failure;
+		w_sw <= x"8"; wait for 10 ns;
+            assert w_Y = '0' report "error on x8" severity failure;
+        w_sw <= x"9"; wait for 10 ns;
+            assert w_Y = '1' report "error on x9" severity failure;
+		w_sw <= x"A"; wait for 10 ns;
+            assert w_Y = '0' report "error on xA" severity failure;
+        w_sw <= x"B"; wait for 10 ns;
+            assert w_Y = '1' report "error on xB" severity failure;
+		w_sw <= x"C"; wait for 10 ns;
+            assert w_Y = '0' report "error on xC" severity failure;
+        w_sw <= x"D"; wait for 10 ns;
+            assert w_Y = '1' report "error on xD" severity failure;
+		w_sw <= x"E"; wait for 10 ns;
+            assert w_Y = '0' report "error on xE" severity failure;
+		w_sw <= x"F"; wait for 10 ns;
+            assert w_Y = '0' report "error on xF" severity failure;
 		wait; -- wait forever
 	end process;	
 	-----------------------------------------------------	
