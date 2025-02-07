@@ -51,8 +51,6 @@
 library ieee;
   use ieee.std_logic_1164.all;
   use ieee.numeric_std.all;
-  use ieee.std_logic_arith.all;
-  use ieee.std_logic_unsigned.all;
 
 -- entity name should match filename, this has been filled out for you  
 entity thirtyOneDayMonth is 
