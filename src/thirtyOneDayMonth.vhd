@@ -60,8 +60,8 @@ entity thirtyOneDayMonth is
 	i_C : in std_logic;
 	i_D : in std_logic;
 	
-	o_Y : out std_logic;	-- output
-	d : in std_logic_vector (7 downto 0)
+	o_Y : out std_logic	-- output
+	--d : in std_logic_vector (7 downto 0)
 	--s : in std_logic_vector (2 downto 0)
 	--y : out std_logic
   );

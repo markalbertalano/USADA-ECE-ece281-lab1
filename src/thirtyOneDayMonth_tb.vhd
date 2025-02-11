@@ -63,8 +63,8 @@ architecture test_bench of thirtyOneDayMonth_tb is
 	i_C : in std_logic;
 	i_D : in std_logic;
 	
-    o_Y : out std_logic;
-    d   : in std_logic_vector(7 downto 0)
+    o_Y : out std_logic
+    --d   : in std_logic_vector(7 downto 0)
     );
   end component;
 
@@ -72,7 +72,7 @@ architecture test_bench of thirtyOneDayMonth_tb is
   
   signal w_sw : std_logic_vector (3 downto 0):= (others=> '0');
   signal w_Y : std_logic := '0';
-  signal w_d : std_logic_vector(7 downto 0) := (others => '0');
+  --signal w_d : std_logic_vector(7 downto 0) := (others => '0');
 
   
 begin
@@ -83,8 +83,8 @@ begin
 			i_C => w_sw(2),
 			i_B => w_sw(1),
 			i_A => w_sw(0),
-			o_Y => w_Y,
-			d   => w_d 
+			o_Y => w_Y
+			--d   => w_d 
         );
 	-----------------------------------------------------
 
