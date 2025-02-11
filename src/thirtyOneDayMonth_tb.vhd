@@ -91,37 +91,37 @@ begin
 	test_process : process 
 	begin
 	-- Place test cases here. The first two have been written for you
-        w_sw <= "0000"; wait for 10 ns;
+        w_sw <= x"0"; wait for 10 ns;
             assert w_Y = '0' report "error on 0" severity failure;
-        w_sw <= "0001"; wait for 10 ns;
+        w_sw <= x"1"; wait for 10 ns;
             assert w_Y = '1' report "error on jan" severity failure;
-        w_sw <= "0010"; wait for 10 ns;
+        w_sw <= x"2"; wait for 10 ns;
             assert w_Y = '0' report "error on feb" severity failure;
-        w_sw <= "0011"; wait for 10 ns;
+        w_sw <= x"3"; wait for 10 ns;
             assert w_Y = '1' report "error on mar" severity failure;
-        w_sw <= "0100"; wait for 10 ns;
+        w_sw <= x"4"; wait for 10 ns;
             assert w_Y = '0' report "error on apr" severity failure;
-        w_sw <= "0101"; wait for 10 ns;
+        w_sw <= x"5"; wait for 10 ns;
             assert w_Y = '1' report "error on may" severity failure;
-        w_sw <= "0110"; wait for 10 ns;
+        w_sw <= x"6"; wait for 10 ns;
             assert w_Y = '0' report "error on jun" severity failure;
-        w_sw <= "0111"; wait for 10 ns;
+        w_sw <= x"7"; wait for 10 ns;
             assert w_Y = '1' report "error on july" severity failure; -- jul
-        w_sw <= "1000"; wait for 10 ns;
+        w_sw <= x"8"; wait for 10 ns;
             assert w_Y = '1' report "error on aug" severity failure;
-        w_sw <= "1001"; wait for 10 ns;
+        w_sw <= x"9"; wait for 10 ns;
             assert w_Y = '0' report "error on sep" severity failure;
-        w_sw <= "1010"; wait for 10 ns;
+        w_sw <= x"A"; wait for 10 ns;
             assert w_Y = '1' report "error on oct" severity failure;
-        w_sw <= "1011"; wait for 10 ns;
+        w_sw <= x"B"; wait for 10 ns;
             assert w_Y = '0' report "error on nov" severity failure;
-        w_sw <= "1100"; wait for 10 ns;
+        w_sw <= x"C"; wait for 10 ns;
             assert w_Y = '1' report "error on dec" severity failure;
-        w_sw <= "1101"; wait for 10 ns;
+        w_sw <= x"D"; wait for 10 ns;
             assert w_Y = '0' report "error on xD" severity failure;
-        w_sw <= "1110"; wait for 10 ns;
+        w_sw <= x"E"; wait for 10 ns;
             assert w_Y = '0' report "error on xE" severity failure;
-        w_sw <= "1111"; wait for 10 ns;
+        w_sw <= x"F"; wait for 10 ns;
             assert w_Y = '0' report "error on xF" severity failure;
         
 	    wait;

@@ -67,37 +67,23 @@ architecture thirtyOneDayMonth_arch of thirtyOneDayMonth is
 	-- include components declarations and signals
     
 	--signals internal to the architecture are declared and initialized such as w_sel
-    signal w_sel : std_logic_vector (3 downto 0); 
+    signal w_sel : std_logic_vector (2 downto 0); 
 begin
 	-- CONCURRENT STATEMENTS---------------------------------------
 	--assigning names to reflect original schematics (for ease of understanding if you wish to)
-	w_sel(0) <= i_A;	-- one
+	w_sel(0) <= i_C;	-- one
 	--finish assigning signals
 	w_sel(1) <= i_B;
-	w_sel(2) <= i_C;
-	w_sel(3) <= i_D;
+	w_sel(2) <= i_A;
 	--enter your logic here to implement the mux.  See VHDL reference sheet for MUX syntax.
-	process(w_sel)
-	begin
-        case w_sel is
-            when "0000" => o_Y <= '0';
-            when "0001" => o_Y <= '1'; --jan
-            when "0010" => o_Y <= '0';
-            when "0011" => o_Y <= '1';
-            when "0100" => o_Y <= '0';
-            when "0101" => o_Y <= '1';
-            when "0110" => o_Y <= '0';
-            when "0111" => o_Y <= '1'; --jul
-            when "1000" => o_Y <= '1';
-            when "1001" => o_Y <= '0';
-            when "1010" => o_Y <= '1';
-            when "1011" => o_Y <= '0';
-            when "1100" => o_Y <= '1';
-            when "1101" => o_Y <= '0';
-            when "1110" => o_Y <= '0';
-            when "1111" => o_Y <= '0';
-            when others => o_Y <= '0';
-        end case;
-    end process;
+	o_Y <= i_D when (w_sel = "000")else
+           i_D when (w_sel = "001") else
+           i_D when (w_sel = "010") else
+           i_D when (w_sel = "011") else
+           not i_D when (w_sel = "100") else
+           not i_D when (w_sel = "101") else
+           not i_D when (w_sel = "110") else
+           not i_D when (w_sel = "111") else
+           '0';
 	
 end thirtyOneDayMonth_arch;
