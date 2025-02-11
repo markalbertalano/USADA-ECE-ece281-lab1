@@ -109,7 +109,7 @@ begin
     w_sw <= "0110"; wait for 10 ns;
         assert w_Y = '0' report "error on jun" severity failure;
     w_sw <= "0111"; wait for 10 ns;
-        assert w_Y = '0' report "error on jul" severity failure; -- jul
+        assert w_Y = '1' report "error on jul" severity failure; -- jul
     w_sw <= "1000"; wait for 10 ns;
         assert w_Y = '1' report "error on aug" severity failure;
     w_sw <= "1001"; wait for 10 ns;
