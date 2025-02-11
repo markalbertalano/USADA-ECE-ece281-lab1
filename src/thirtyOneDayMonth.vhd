@@ -85,15 +85,19 @@ begin
 	process(w_sel,i_D)
 	begin
         case w_sel is
-            when "000" => o_Y <= i_D;
-            when "001" => o_Y <= not i_D;
+            when "001" => o_Y <= '1';
             when "010" => o_Y <= '0';
             when "011" => o_Y <= '1';
-            when "100" => o_Y <= i_D and '1';
-            when "101" => o_Y <= i_D or '0';
-            when "110" => o_Y <= not i_D;
-            when "111" => o_Y <= i_D xor '1';
-            when others => o_Y <= '0';  -- Default output
+            when "100" => o_Y <= '0';
+            when "101" => o_Y <= '1';
+            when "110" => o_Y <= '0';
+            when "111" => o_Y <= '1';
+            when "1000" => o_Y <= '1';
+            when "1001" => o_Y <= '0';
+            when "1010" => o_Y <= '1';
+            when "1011" => o_Y <= '0';
+            when "1100" => o_Y <= '1';
+            when others => o_Y <= '0';
         end case;
     end process;
 	
