@@ -87,13 +87,13 @@ begin
 	begin
         case w_sel is
             when "0000" => o_Y <= '0';
-            when "0001" => o_Y <= '1';
+            when "0001" => o_Y <= '1'; --jan
             when "0010" => o_Y <= '0';
             when "0011" => o_Y <= '1';
             when "0100" => o_Y <= '0';
             when "0101" => o_Y <= '1';
             when "0110" => o_Y <= '0';
-            when "0111" => o_Y <= '1';
+            when "0111" => o_Y <= '1'; --jul
             when "1000" => o_Y <= '1';
             when "1001" => o_Y <= '0';
             when "1010" => o_Y <= '1';
