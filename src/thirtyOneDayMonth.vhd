@@ -83,7 +83,7 @@ begin
 	
 	--enter your logic here to implement the mux.  See VHDL reference sheet for MUX syntax.
 	--o_Y <= (not i_A and i_D) or (i_A and not i_D);
-	process(w_sel,i_D)
+	process(w_sel)
 	begin
         case w_sel is
             when "0000" => o_Y <= '0';

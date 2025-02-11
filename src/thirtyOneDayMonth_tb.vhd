@@ -70,7 +70,7 @@ architecture test_bench of thirtyOneDayMonth_tb is
 
   -- declare any additional components required
   
-  signal w_sw : std_logic_vector (3 downto 0):= (others=> '0');
+  signal w_sw : std_logic_vector (3 downto 0):= (others => '0');
   signal w_Y : std_logic := '0';
   --signal w_d : std_logic_vector(7 downto 0) := (others => '0');
 
