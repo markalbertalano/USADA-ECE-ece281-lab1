@@ -85,6 +85,7 @@ begin
 	process(w_sel,i_D)
 	begin
         case w_sel is
+            when "0000" => o_Y <= '0';
             when "0001" => o_Y <= '1';
             when "0010" => o_Y <= '0';
             when "0011" => o_Y <= '1';
@@ -97,7 +98,10 @@ begin
             when "1010" => o_Y <= '1';
             when "1011" => o_Y <= '0';
             when "1100" => o_Y <= '1';
-            when others => o_Y <= '0';
+            when "1101" => o_Y <= '0';
+            when "1110" => o_Y <= '0';
+            when "1111" => o_Y <= '0';
+
         end case;
     end process;
 	
