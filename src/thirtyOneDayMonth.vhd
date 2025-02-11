@@ -101,7 +101,7 @@ begin
             when "1101" => o_Y <= '0';
             when "1110" => o_Y <= '0';
             when "1111" => o_Y <= '0';
-
+            when others => o_Y <= '0';
         end case;
     end process;
 	
