@@ -61,10 +61,8 @@ architecture test_bench of thirtyOneDayMonth_tb is
 	i_A : in std_logic;
 	i_B : in std_logic;
 	i_C : in std_logic;
-	i_D : in std_logic;
-	
+	i_D : in std_logic;	
     o_Y : out std_logic
-    --d   : in std_logic_vector(7 downto 0)
     );
   end component;
 
@@ -84,7 +82,6 @@ begin
 			i_B => w_sw(1),
 			i_A => w_sw(0),
 			o_Y => w_Y
-			--d   => w_d 
         );
 	-----------------------------------------------------
 
@@ -108,7 +105,7 @@ begin
             assert w_Y = '1' report "error on may" severity failure;
         w_sw <= "0110"; wait for 10 ns;
             assert w_Y = '0' report "error on jun" severity failure;
-        w_sw <= "0111"; wait for 10 ns;
+        w_sw <= "0111"; wait for 10000 ns;
             assert w_Y = '1' report "error on jul" severity failure; -- jul
         w_sw <= "1000"; wait for 10 ns;
             assert w_Y = '1' report "error on aug" severity failure;

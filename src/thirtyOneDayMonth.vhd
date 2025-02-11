@@ -59,11 +59,7 @@ entity thirtyOneDayMonth is
 	i_B : in std_logic;
 	i_C : in std_logic;
 	i_D : in std_logic;
-	
 	o_Y : out std_logic	-- output
-	--d : in std_logic_vector (7 downto 0)
-	--s : in std_logic_vector (2 downto 0)
-	--y : out std_logic
   );
 end thirtyOneDayMonth;
 
@@ -81,7 +77,6 @@ begin
 	w_sel(2) <= i_C;
 	w_sel(3) <= i_D;
 	--enter your logic here to implement the mux.  See VHDL reference sheet for MUX syntax.
-	--o_Y <= (not i_A and i_D) or (i_A and not i_D);
 	process(w_sel)
 	begin
         case w_sel is
