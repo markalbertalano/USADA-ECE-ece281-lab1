@@ -71,7 +71,7 @@ architecture thirtyOneDayMonth_arch of thirtyOneDayMonth is
 	-- include components declarations and signals
     
 	--signals internal to the architecture are declared and initialized such as w_sel
-    signal w_sel : std_logic_vector (2 downto 0); 
+    signal w_sel : std_logic_vector (3 downto 0); 
 begin
 	-- CONCURRENT STATEMENTS---------------------------------------
 	--assigning names to reflect original schematics (for ease of understanding if you wish to)
@@ -85,13 +85,13 @@ begin
 	process(w_sel,i_D)
 	begin
         case w_sel is
-            when "001" => o_Y <= '1';
-            when "010" => o_Y <= '0';
-            when "011" => o_Y <= '1';
-            when "100" => o_Y <= '0';
-            when "101" => o_Y <= '1';
-            when "110" => o_Y <= '0';
-            when "111" => o_Y <= '1';
+            when "0001" => o_Y <= '1';
+            when "0010" => o_Y <= '0';
+            when "0011" => o_Y <= '1';
+            when "0100" => o_Y <= '0';
+            when "0101" => o_Y <= '1';
+            when "0110" => o_Y <= '0';
+            when "0111" => o_Y <= '1';
             when "1000" => o_Y <= '1';
             when "1001" => o_Y <= '0';
             when "1010" => o_Y <= '1';
